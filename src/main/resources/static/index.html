@@ -1,22 +1,125 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="es">
     <head>
         <title>Tienda en línea</title>
         <meta charset="UTF-8">
+        <meta name="description" content="TecShop Main Page">
+        <meta name="keywords" content="tecShop, product, compute">
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <a href="Ejemplo8.html">Back</a>
-        <a href="index.html">Home</a>
-        <a href="ejemplo2.html">Next</a>
+        <header id="encabezado">  <!-- Etiquta para ofrecerle al browser infor para distribuir la pagina -->
+            <h1>TechShop</h1>
+        </header>
+        <nav id="menu"> <!-- Le ilustra al browser que usualmente esto es un menu... -->
+            <a href="Ejemplo8.html">Back</a>
+            <a href="index.html">Home</a>
+            <a href="ejemplo2.html">Next</a>
+        </nav>
         
-        <div>
-            <h1 style="text-align: center;background-color: black;color: white">Home</h1>
-            <p>Bienvenidos a la pagina de la tienda en linea :)</p>
-        </div>
-        <p style="text-align: left">Lorem ipsum dolor sit amet consectetur adipiscing elit curabitur id himenaeos luctus, ad arcu vulputate sociosqu condimentum fermentum vestibulum pharetra venenatis hendrerit,</p>
+        <aside id="barralateral"> <!-- Seria una barra lateral que eventualmente se puede deslizar, puede ser izquierda o derecha -->
+            <h2><br><br>Últimas noticias</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </aside>
+        
+        <section id="contenido"> <!-- Esto es el contenido principal de la pagina -->
+            <h2>Articulos principales</h2>
+            
+            <article>
+                <header><h3>Portatil XRT 5000</h3></header>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <figure>
+                    <img src="Imagenes/Portatil1.jpg" alt="Portatil gamer"/>
+                    <figcaption>La mas barata del mercado</figcaption>
+                </figure>
+                
+                <footer>Agregar al carrito</footer>
+            </article>
+            
+            <hr>
+            
+            <article>
+                <header><h3>Desktop Alienware 5450</h3></header>
+                <p>
+                    Inspirada en la pelicula de culto <cite>Aliens el septimo pasajero, </cite>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <figure>
+                    <img src="Imagenes/AlienwareDesktop.jpg" alt="Pc gamer de gama alta"/>
+                    <figcaption></figcaption>
+                </figure>
+                <footer>Agregar al carrito</footer>
+            </article>
+            
+            <hr>
+            
+            <article>
+                <header><h3>Impresora 3D XRG-400</h3></header>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <figure>
+                    <img src="Imagenes/Impresora3D.jpg" alt="Impresora para figuras de 5cm de alto"/>
+                    <figcaption></figcaption>
+                </figure>
+                <footer>Agregar al carrito</footer>
+            </article>
+            
+            <hr>
+            
+            <article>
+                <header><h3>Tarjeta de video Acrom-9000</h3></header>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <figure>
+                    <img src="Imagenes/TarjetaGrafica.jpg" alt="Tarjeta grafica profesional"/>
+                    <figcaption></figcaption>
+                </figure>
+                <footer >Agregar al carrito</footer>
+                <br>
+            </article>
+            
+            <article>
+                <header><h3>Resumen de articulo</h3></header>
+                <table border="0">
+                    <thead>
+                        <tr id="encabezadoTabla">
+                            <th>Código</th>
+                            <th>Detalle</th>
+                        </tr>
+                    </thead>
+                    <tbody id="detalleTabla">
+                        <tr>
+                            <td>1</td>
+                            <td> Lorem ipsum dolor sit amet, consectetur adipisicing elit, </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td> Lorem ipsum dolor sit amet, consectetur adipisicing</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td> Lorem ipsum dolor sit amet, iam, quis nostrud exercitation ullamco lex </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                
+            </article>
+        </section>
+        
+        
+        <footer id="piepagina">Derechos reservados &COPY; 2022, central: <address style="display: inline">+506 2020-2020 </address></footer>
+        <!--<p style="text-align: left">Lorem ipsum dolor sit amet consectetur adipiscing elit curabitur id himenaeos luctus, ad arcu vulputate sociosqu condimentum fermentum vestibulum pharetra venenatis hendrerit,</p>
         <p style="text-align: center">dignissim posuere mauris sodales dictum dis convallis lobortis magna litora. Ut porta in ornare eros vivamus natoque purus dictum proin, elementum auctor tempor semper sagittis</p> 
         <p style="text-align: center">odio ultricies hac. Pharetra interdum maecenas congue nullam dictum semper orci et primis convallis, hendrerit facilisi suspendisse feugiat at pellentesque dui duis montes,</p> 
-        <p style="text-align: right">mollis nam varius tortor ut malesuada massa sollicitudin nascetur.</p>
+        <p style="text-align: right">mollis nam varius tortor ut malesuada massa sollicitudin nascetur.</p> -->
     </body>
 </html>
