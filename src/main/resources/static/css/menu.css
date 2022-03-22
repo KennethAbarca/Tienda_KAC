@@ -59,3 +59,24 @@ body {
    background-color: #024070;
    transition: 1s;
 }
+
+.footer {
+    background-color: black;
+    color: white;
+    height: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.contenido {
+    background-color: wheat;
+    position: fixed;
+    top: 80px;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    overflow: auto;
+}

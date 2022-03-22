@@ -5,7 +5,7 @@ import java.util.List;
 
 
 public interface ClienteService {
-    public List<Cliente> getCliente();
+    public List<Cliente> getClientes();
     
     public void save(Cliente cliente); //O inserta o actualiza
     
