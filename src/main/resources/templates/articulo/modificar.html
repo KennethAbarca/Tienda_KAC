@@ -1,50 +1,52 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-    xmlns="http://www.w3.org/1999/xhtml">
-    <head>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://wwww.thymeleaf.org" 
+      xmlns:sec="http://thymeleaft.org/extras/spring-security">
+    <head th:replace="layout/plantilla :: head">
         <title>TechShop</title>
-        <meta charset="UTF-8"/>
-    <link href="/css/menu.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <header th:replace="layout/plantilla :: header"/>
         <div class="contenido">
-        <h1>Datos de Articulo</h1>
+            <h1 th:action="#{articulo.datos}">Datos de Articulo</h1>
 
-        <a th:href="@{/}">Regresar</a>
-        
-        <form th:action="@{/articulo/guardar}"
-              method="post"
-              th:object="${articulo}">
-            <input type="hidden" name="idArticulo" th:field="*{idArticulo}"/>
-            <label for="idCategoria">idCategoria</label>
-            <input type="number" name="idCategoria" th:field="*{idCategoria}"/>
-            <br/>
-            
-            <label for="descripcion">Nombre:</label>
-            <input type="text" name="descripcion" th:field="*{descripcion}"/>
-            <br/>
-            
-            <label for="detalle">Detalle:</label>
-            <input type="text" name="detalle" th:field="*{detalle}"/>
-            <br/>
-            
-            <label for="precio">Precio:</label>
-            <input type="number" name="precio" th:field="*{precio}"/>
-            <br/>
-            
-            <label for="existencias">Existencia:</label>
-            <input type="number" name="existencias" th:field="*{existencias}"/>
-            <br/>
-            
-            <label for="activo">Activo</label>
-            <input type="text" name="activo" th:field="*{activo}"/>
-            <br/>
-           
-                
-            <input type="submit" name="guardar" value="Guardar"/>
-            
-        </form>
+            <a th:href="@{/articulo/listado}" th:text="#{accion.regresar}">Regresar</a>
+
+            <form th:action="@{/articulo/guardar}" method="post" th:object="${articulo}">
+
+                <input type="hidden" name="idArticulo" th:field="*{idArticulo}"/>
+
+                <label for="categoria" th:text="#{articulo.categoria}">Categoria</label>
+                <select th:field="*{idCategoria}">
+                    <option th:each="categoria: ${categorias}"
+                            th:value="${categoria.idCategoria}"
+                            th:text="${categoria.descripcion}"/>
+                </select><br>
+
+                <label for="descripcion">Nombre:</label>
+                <input type="text" name="descripcion" th:field="*{descripcion}"/>
+                <br/>
+
+                <label for="detalle">Detalle:</label>
+                <input type="text" name="detalle" th:field="*{detalle}"/>
+                <br/>
+
+                <label for="precio">Precio:</label>
+                <input type="number" name="precio" th:field="*{precio}"/>
+                <br/>
+
+                <label for="existencias">Existencia:</label>
+                <input type="number" name="existencias" th:field="*{existencias}"/>
+                <br/>
+
+                <label for="activo">Activo</label>
+                <input type="checkbox" name="activo" th:field="*{activo}"/>
+                <br/>
+
+
+                <input type="submit" name="guardar" value="Guardar"/>
+
+            </form>
         </div>
         <footer th:replace="layout/plantilla :: footer"/>
     </body>
